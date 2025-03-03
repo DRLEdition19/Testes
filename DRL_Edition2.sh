@@ -61,7 +61,7 @@ ascii_art=(
 # Animação da arte ASCII com efeito degradê
 for ((k=0; k<3; k++)); do  # 3 ciclos completos
     for ((i=0; i<${#colors[@]}; i++)); do
-        clear
+        #clear
         # Mostra data e hora 
         show_current_time
         
@@ -74,7 +74,7 @@ for ((k=0; k<3; k++)); do  # 3 ciclos completos
 done
 
 # Mostra a versão final em azul
-#clear
+clear
 show_current_time
 for line in "${ascii_art[@]}"; do
     echo -e "${blue}${line}${reset}"
@@ -88,8 +88,8 @@ echo -ne "${PURPLE}"  # Cor roxa para a mensagem final
 type_text "Obrigado por executar este script!"
 type_text "Desenvolvido por DRLEdition19"
 type_text "Pressione qualquer tecla para sair..."
-echo -ne "${reset}"
+#echo -ne "${reset}"
 
 # Aguarda pressionar uma tecla para sair
 read -n 1 -s
-#clear
+clear
