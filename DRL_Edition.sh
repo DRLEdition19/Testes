@@ -10,8 +10,7 @@ clear
 
 # Função para exibir data e hora atual
 show_current_time() {
-    echo -e "Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted):"
-    echo -e "2025-03-03 16:06:55"
+    echo -e "Current Date and Time (UTC): $(date '+%Y-%m-%d %H:%M:%S')"
     echo -e "Current User's Login: DRLEdition19"
     echo
 }
