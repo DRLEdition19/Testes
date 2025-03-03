@@ -86,10 +86,11 @@ echo ""
 
 # Mensagem final com animação de digitação
 echo -ne "${PURPLE}"  # Cor roxa para a mensagem final
-type_text "Obrigado por executar este script! Desenvolvido por DRLEdition19"
+type_text "Obrigado por executar este script!"
+type_text "Desenvolvido por DRLEdition19"
 type_text "Pressione qualquer tecla para sair..."
 echo -ne "${reset}"
 
 # Aguarda pressionar uma tecla para sair
 read -n 1 -s
-clear
+#clear
