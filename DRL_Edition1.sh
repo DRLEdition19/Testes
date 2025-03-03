@@ -91,5 +91,5 @@ type_text "Pressione qualquer tecla para sair..."
 #echo -ne "${reset}"
 
 # Aguarda pressionar uma tecla para sair
-read -n 1 -s
+#read -n 1 -s
 #clear
