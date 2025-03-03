@@ -1,11 +1,12 @@
 #!/bin/bash
+clear
 
 # Exibe mensagem inicial
 echo "Apresentando..."
 sleep 2
 
 # Limpa o terminal
-clear
+#clear
 
 # Frase a ser exibida
 phrase="DRL Edition"
