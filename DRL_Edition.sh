@@ -61,7 +61,7 @@ ascii_art=(
 # Animação da arte ASCII com efeito degradê
 for ((k=0; k<3; k++)); do  # 3 ciclos completos
     for ((i=0; i<${#colors[@]}; i++)); do
-        #clear
+        clear
         # Mostra data e hora 
         show_current_time
         
@@ -92,4 +92,4 @@ type_text "Pressione qualquer tecla para sair..."
 
 # Aguarda pressionar uma tecla para sair
 read -n 1 -s
-clear
+#clear
