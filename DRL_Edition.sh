@@ -8,7 +8,7 @@ clear_screen() {
 # Função para centralizar texto
 center_text() {
     local text="$1"
-    local width=$(tput cols)
+#    local width=$(tput cols)
     local padding=$(( (width - ${#text}) / 2 ))
     printf "%${padding}s" ""
     printf "%s\n" "$text"
