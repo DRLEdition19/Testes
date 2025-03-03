@@ -8,11 +8,12 @@ sleep 2
 # Limpa o terminal
 clear
 
-# Informações do sistema
-echo -e "Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted):"
-echo -e "2025-03-03 16:00:39"
-echo -e "Current User's Login: DRLEdition19"
-echo
+# Função para exibir data e hora atual
+show_current_time() {
+    echo -e "Current Date and Time (UTC): $(date '+%Y-%m-%d %H:%M:%S')"
+    echo -e "Current User's Login: DRLEdition19"
+    echo
+}
 
 # Códigos de cores ANSI
 blue="\e[34m"   # cor final: azul
@@ -39,7 +40,7 @@ colors=(
 
 # Arte ASCII do DRL Edition
 ascii_art=(
-"██████╗  ██████╗  ██╗         ███████╗██████╗ ██╗████████╗██╗ ██████╗ ███╗   ██╗"
+"██████╗  ██████╗ ██╗         ███████╗██████╗ ██╗████████╗██╗ ██████╗ ███╗   ██╗"
 "██╔══██╗██╔══██╗ ██║         ██╔════╝██╔══██╗██║╚══██╔══╝██║██╔═══██╗████╗  ██║"
 "██║  ██║██████╔╝ ██║         █████╗  ██║  ██║██║   ██║   ██║██║   ██║██╔██╗ ██║"
 "██║  ██║██╔══██╗ ██║         ██╔══╝  ██║  ██║██║   ██║   ██║██║   ██║██║╚██╗██║"
@@ -51,11 +52,8 @@ ascii_art=(
 for ((k=0; k<3; k++)); do  # 3 ciclos completos
     for ((i=0; i<${#colors[@]}; i++)); do
         clear
-        # Mostra informações do sistema novamente após cada clear
-        echo -e "Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted):"
-        echo -e "2025-03-03 16:00:39"
-        echo -e "Current User's Login: DRLEdition19"
-        echo
+        # Mostra data e hora atual
+        show_current_time
         
         # Mostra a arte ASCII na cor atual do degradê
         for line in "${ascii_art[@]}"; do
@@ -67,10 +65,7 @@ done
 
 # Mostra a versão final em azul
 clear
-echo -e "Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted):"
-echo -e "2025-03-03 16:00:39"
-echo -e "Current User's Login: DRLEdition19"
-echo
+show_current_time
 for line in "${ascii_art[@]}"; do
     echo -e "${blue}${line}${reset}"
 done
