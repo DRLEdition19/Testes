@@ -74,7 +74,7 @@ for ((k=0; k<3; k++)); do  # 3 ciclos completos
 done
 
 # Mostra a versão final em azul
-clear
+#clear
 show_current_time
 for line in "${ascii_art[@]}"; do
     echo -e "${blue}${line}${reset}"
