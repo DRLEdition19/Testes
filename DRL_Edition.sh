@@ -10,8 +10,19 @@ clear
 
 # Função para exibir data e hora atual
 show_current_time() {
-    echo -e "Current Date and Time (UTC): $(date '+%Y-%m-%d %H:%M:%S')"
+    echo -e "Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted):"
+    echo -e "2025-03-03 16:06:55"
     echo -e "Current User's Login: DRLEdition19"
+    echo
+}
+
+# Função para animação de digitação
+type_text() {
+    text="$1"
+    for ((i=0; i<${#text}; i++)); do
+        echo -n "${text:$i:1}"
+        sleep 0.05
+    done
     echo
 }
 
@@ -52,7 +63,7 @@ ascii_art=(
 for ((k=0; k<3; k++)); do  # 3 ciclos completos
     for ((i=0; i<${#colors[@]}; i++)); do
         clear
-        # Mostra data e hora atual
+        # Mostra data e hora 
         show_current_time
         
         # Mostra a arte ASCII na cor atual do degradê
@@ -73,5 +84,12 @@ done
 # Pula uma linha
 echo ""
 
-# Mensagem final
-echo "Obrigado por executar este script!"
+# Mensagem final com animação de digitação
+echo -ne "${PURPLE}"  # Cor roxa para a mensagem final
+type_text "Obrigado por executar este script! Desenvolvido por DRLEdition19"
+type_text "Pressione qualquer tecla para sair..."
+echo -ne "${reset}"
+
+# Aguarda pressionar uma tecla para sair
+read -n 1 -s
+clear
