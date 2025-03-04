@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 
-# Exibe mensagem inicial
+# Exibe mensagem inicial 
 echo "Apresentando..."
 sleep 2
 
